@@ -24,4 +24,12 @@ Print a message:
 <list of numbers>
 The list of numbers should be print out one per line in lexicographic order with no duplicates.
 """
+first_calls, second_calls, time_calls, durations = zip(*calls)
 
+marketing_phones = set(filter(lambda x: x.startswith("140"), first_calls))
+
+print("These numbers could be telemarketers: ")
+for i in marketing_phones:
+    print(i)
+
+# Big(O) = n

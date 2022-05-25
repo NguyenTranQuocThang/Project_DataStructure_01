@@ -44,3 +44,43 @@ Print the answer as a part of a message::
 to other fixed lines in Bangalore."
 The percentage should have 2 decimal digits
 """
+
+# Part A
+first_calls, second_calls, time_calls, durations = zip(*calls)
+
+list_phones = list(zip(first_calls, second_calls))
+
+list_phones_bangalore = filter(lambda x: x[0].startswith("(080)"), list_phones)
+
+bangalores, list_phones_recieve_bangalore = zip(*list_phones_bangalore)
+
+# print(list_phones_recieve_bangalore)
+
+area_codes = []
+
+prefix_mobiles = []
+
+for i in list_phones_recieve_bangalore:
+    if i.startswith("(0"):
+        area_codes.append(i.split(")")[0][1:])
+    if ' ' in i and (i.startswith("9") or i.startswith("8") or i.startswith("7")):
+        prefix_mobiles.append(i[0:5])
+data = sorted(set(area_codes))
+print("The numbers called by people in Bangalore have codes:")
+for i in data:
+    print(i)
+
+# Big(O) = n
+
+# PartB
+
+list_phones_recieve_at_bangalore = filter(
+    lambda x: x.startswith("(080)"), list_phones_recieve_bangalore)
+
+percentage = len(list(list_phones_recieve_at_bangalore)) / \
+    len(list_phones_recieve_bangalore)*100
+
+print("{:.2f} percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore"
+      .format(percentage))
+
+# Big(O) = n^2
