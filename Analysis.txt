@@ -1,0 +1,8 @@
+task 0 : Big O = O(1) because it no loop
+task 1 : Big O = O(nlogn) , set have complexity is nlogn
+task 2 : Big O = O(n) + O(n) + O(n) , complexiy of one loop(no nest loop) is O(n) and the last is complexity of Max function also is O(n)
+task 3 : 
+    Part A: Big O = O(n) + O(n) + O(nlog(n)) = O(nlog(n)) ,complexiy of one loop(no nest loop) is O(n), complexity of Sorted is O(nlogn)
+    Part B: Big O = O(n^2) because it filter after filter of first list_phones bangalores, complexity of one filter is O(n)
+task 4 :
+    Big O = O(n) -> n is size of phones
