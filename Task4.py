@@ -38,4 +38,3 @@ print("These numbers could be telemarketers: ")
 for i in marketing_phones:
     print(i)
 
-# Big(O) = O(nlog(n))
