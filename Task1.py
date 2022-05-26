@@ -30,4 +30,4 @@ unique_phones = set(merge_phones)
 print("There are {} different telephone numbers in the records.".format(
     len(unique_phones)))
 
-# Big0 = 1
+
