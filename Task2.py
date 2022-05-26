@@ -38,3 +38,5 @@ key = max(duration_phones, key=lambda k: duration_phones[k])
 value = duration_phones[key]
 
 print("{} spent the longest time, {} seconds, on the phone during September 2016.".format(key, value))
+
+# Big(O) = O(n) + O(n) + O(n) 
