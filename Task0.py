@@ -26,4 +26,3 @@ print("First record of texts, {} texts {} at time {}".format(
 print("Last record of calls, {} calls {} at time {}, lasting {} seconds".format(
     calls[len(calls) - 1][0], calls[len(calls) - 1][1], calls[len(calls) - 1][2], calls[len(calls) - 1][3]))
 
-# Big O = 1
