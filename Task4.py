@@ -25,11 +25,17 @@ Print a message:
 The list of numbers should be print out one per line in lexicographic order with no duplicates.
 """
 first_calls, second_calls, time_calls, durations = zip(*calls)
+first_texts, second_texts, time_texts = zip(*texts)
 
-marketing_phones = set(filter(lambda x: x.startswith("140"), first_calls))
+merge_phones = set(second_calls+first_texts+second_texts)
+
+phones = set(first_calls + second_calls+first_texts+second_texts)
+
+marketing_phones = sorted(phones.difference(merge_phones))
 
 print("These numbers could be telemarketers: ")
+
 for i in marketing_phones:
     print(i)
 
-# Big(O) = n
+# Big(O) = O(nlog(n))
