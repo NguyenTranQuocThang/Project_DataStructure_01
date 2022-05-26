@@ -70,7 +70,7 @@ print("The numbers called by people in Bangalore have codes:")
 for i in data:
     print(i)
 
-# Big(O) = O(n) + O(n) + O(nlog(n)) = O(nlog(n))
+
 
 # PartB
 
@@ -83,4 +83,4 @@ percentage = len(list(list_phones_recieve_at_bangalore)) / \
 print("{:.2f} percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore"
       .format(percentage))
 
-# Big(O) = n^2
+
