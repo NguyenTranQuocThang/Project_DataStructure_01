@@ -65,12 +65,12 @@ for i in list_phones_recieve_bangalore:
         area_codes.append(i.split(")")[0][1:])
     if ' ' in i and (i.startswith("9") or i.startswith("8") or i.startswith("7")):
         prefix_mobiles.append(i[0:5])
-data = sorted(set(area_codes))
+data = sorted(set(area_codes+ prefix_mobiles))
 print("The numbers called by people in Bangalore have codes:")
 for i in data:
     print(i)
 
-# Big(O) = n
+# Big(O) = O(n) + O(n) + O(nlog(n)) = O(nlog(n))
 
 # PartB
 
